@@ -1,27 +1,313 @@
-.thing-form {
-  margin: 20px 0;
+@import '~bootstrap/dist/css/bootstrap.css';
+/**
+ * Bootstrap Fonts
+ */
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('/assets/fonts/bootstrap/glyphicons-halflings-regular.eot');
+  src: url('/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/bootstrap/glyphicons-halflings-regular.woff') format('woff'),
+  url('/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf') format('truetype'),
+  url('/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
-#banner {
-  border-bottom: none;
-  margin-top: -20px;
+@import '~font-awesome/css/font-awesome.css';
+
+/**
+ *Font Awesome Fonts
+ */
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/assets/fonts/font-awesome/fontawesome-webfont.eot?v=4.1.0');
+  src: url('/assets/fonts/font-awesome/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'),
+  url('/assets/fonts/font-awesome/fontawesome-webfont.woff?v=4.1.0') format('woff'),
+  url('/assets/fonts/font-awesome/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),
+  url('/assets/fonts/font-awesome/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-#banner h1 {
-  font-size: 60px;
-  line-height: 1;
-  letter-spacing: -1px;
+/**
+ * App-wide Styles
+ */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
 
-.hero-unit {
-  position: relative;
-  padding: 30px 15px;
-  color: #F5F5F5;
-  text-align: center;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  background: #4393B9;
+
+/* Component styles are injected through gulp */
+/* inject:css */
+@import 'main/main.css';
+@import 'parts-guide/parts-guide.css';
+@import '../components/footer/footer.css';
+@import '../components/modal/modal.css';
+/* endinject */
+
+/*
+--------------------
+------- ALL --------
+--------------------
+*/
+
+a {
+    text-decoration: none;
 }
 
-.navbar-text {
-  margin-left: 15px;
+ul {
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+body {
+    margin: 0px;
+    font-family: Verdana;
+}
+
+/*
+--------------------
+------ HEADER ------
+--------------------
+*/
+
+.page-container {
+    margin: 0 auto;
+    padding: 0 32px;
+    width: 1200px;
+    overflow: auto;
+}
+
+.page-container h1 {
+    display: inline-block;
+}
+
+.logo-header {
+    display: inline-block;
+    width: 30px;
+    height: auto;
+    margin-right: 1em;
+}
+
+header {
+    padding-top: 1em;
+    background-color: #708090;
+}
+
+nav {
+    background-color: #36454f;
+    display: block;
+}
+
+.nav-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-left: 1px solid #708090;
+    /*border-right: 1px solid #708090;*/
+}
+
+.primary-nav {
+    float: left;
+}
+
+.primary-nav a {
+    color: white;
+    height: 35px;
+    font-weight: 700;
+    display: inline-block;
+    padding: .75em 3em .75em .3em;
+    border-right: 1px solid #708090;
+}
+
+.primary-nav a:hover {
+    color: #6e7f80;
+}
+
+.primary-nav span {
+    text-transform: uppercase;
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 5px;
+    color: #6e7f80;
+}
+
+.secondary-nav {
+    float: right;
+    height: 35px;
+}
+
+.nav-reddit {
+    width: 200px;
+
+}
+
+.nav-reddit img {
+    height: 35px;
+}
+
+.nav-reddit a {
+    float: right;
+    font-weight: 500;
+    height: 35px;
+    padding: .75em 1em .75em 3em;
+}
+
+/*
+--------------------
+---- RESOURCES -----
+--------------------
+*/
+
+.main-section {
+    overflow: auto;
+}
+
+.builder-resources {
+    padding: 40px 0;
+    overflow: auto;
+}
+
+.resources-header {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+.resources-header p {
+    width: 32%;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+.br-header {
+    font-size: 50px;
+}
+
+.resource-box-left {
+    float: left;
+    width: 25%;
+    height: 100px;
+    padding: 1em 2em 5em 2em;
+    margin-top: 2em;
+    margin-left: 12em;
+    position: relative;
+    border: 1px solid #8c99a6;
+    background-color: #708090;
+    display: inline-block;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+.resource-box-left::after {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.resource-box-left:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.resource-box-left:hover::after {
+    opacity: 1;
+}
+
+.resource-box-right {
+    float: right;
+    width: 25%;
+    height: 100px;
+    padding: 1em 2em 5em 2em;
+    margin-right: 12em;
+    margin-top: 2em;
+    position: relative;
+    border: 1px solid #8c99a6;
+    background-color: #708090;
+    display: inline-block;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+.resource-box-right::after {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.resource-box-right:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.resource-box-right:hover::after {
+    opacity: 1;
+}
+
+.res-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.resource-box-left img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.resource-box-left li {
+    color: white;
+    text-align: center;
+}
+
+.resource-box-right img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.resource-box-right li {
+    color: white;
+    text-align: center;
+}
+
+#snoo-img {
+    width: 100px;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+#li-grey {
+    color: #666;
+    font-size: 30px;
+    margin: .5em 0 1em 0;
+}
+
+#li-blue {
+    color: #1ba1e2;
 }

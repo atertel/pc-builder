@@ -50,4 +50,22 @@ angular
     angular.bootstrap(document, ['pcbuilderApp'], {
       strictDi: true
     });
+});
+
+/*
+import PartsModule from './parts-guide/parts-guide.component.ts';
+angular.module('pcbuilderApp', [
+  ...
+  main,
+  PartsModule,
+])
+  .config(routeConfig)
+  .run(...);
+
+angular.element(document)
+  .ready(() => {
+    angular.bootstrap(document, ['pcbuilderApp'], {
+      strictDi: true
+    });
   });
+*/
