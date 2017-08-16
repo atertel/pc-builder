@@ -82,7 +82,6 @@ body {
     margin: 0 auto;
     padding: 0 32px;
     width: 1200px;
-    overflow: auto;
 }
 
 .page-container h1 {
@@ -121,11 +120,12 @@ nav {
 
 .primary-nav a {
     color: white;
-    height: 35px;
+    height: auto;
     font-weight: 700;
     display: inline-block;
-    padding: .75em 3em .75em .3em;
+    padding: .5em 3em .5em .3em;
     border-right: 1px solid #708090;
+    text-decoration: none;
 }
 
 .primary-nav a:hover {
@@ -170,12 +170,12 @@ nav {
 */
 
 .main-section {
-    overflow: auto;
+
 }
 
 .builder-resources {
     padding: 40px 0;
-    overflow: auto;
+
 }
 
 .resources-header {
